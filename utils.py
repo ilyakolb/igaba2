@@ -135,3 +135,48 @@ def debleach(f_trace, t):
     y_fit = f_trace[fit_idx]
     p = np.polyfit(x_fit, y_fit, 1)
     return f_trace - np.polyval(p, t)
+
+# all mutated positions in JM's coordinates JH: from Z:\ilya\protein\iGABASnFR_naming_lookup.xlsx
+# map from JM's numbering to protein numbering
+# i.e. to get true position of F102G, look up position_LUT[102]
+# 1st column: JM names
+# 2nd column: protein positions
+position_LUT = {8: 8,
+12: 12,
+14: 14,
+17: 17,
+38: 38,
+39: 39,
+41: 41,
+99: 99,
+101: 101,
+102: 102,
+104: 104,
+115: 115,
+137: 137,
+207: 207,
+211: 211,
+225: 225,
+253: 253,
+256: 256,
+258: 258,
+262: 262,
+263: 263,
+267: 267,
+272: 272,
+274: 274,
+276: 276,
+150: 323,
+162: 335,
+164: 337,
+165: 338,
+168: 341,
+178: 351,
+200: 373,
+203: 376,
+205: 378,
+220: 393,
+282: 527,
+283: 528,
+291: 536,
+293: 538}
